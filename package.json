@@ -4,12 +4,30 @@
   "version": "1.0.0",
   "main": "./dist/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run dev",
+    "dev": "npm test -- -w",
+    "init": "mkdir dist",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean && npm run init",
+    "build": "babel ./src -d ./dist --ignore test.js",
+    "pretest": "npm run build",
+    "test": "mocha --compilers js:babel-core/register ./src/**/*.test.js",
+    "test:single": "mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sangkyoonnam/es6-with-babel-package.git"
   },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-preset-es2015": "^6.16.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  },
+  "files": [
+    "dist"
+  ],
   "author": "Sangkyoon Nam <sangkyoon.nam@namsang.org>",
   "license": "UNLICENSED"
 }

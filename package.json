@@ -1,0 +1,15 @@
+{
+  "name": "es6-with-babel-package",
+  "description": "Library development in ES6 with Babel, Mocha and npm scripts",
+  "version": "1.0.0",
+  "main": "./dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangkyoonnam/es6-with-babel-package.git"
+  },
+  "author": "Sangkyoon Nam <sangkyoon.nam@namsang.org>",
+  "license": "UNLICENSED"
+}
